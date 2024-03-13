@@ -1,0 +1,1860 @@
+{
+    "address" : [
+        {   
+            "nombre" : "N_10.160.0.0_16-IDC2",
+            "tipo" : "ipmask",
+            "red" : "10.160.0.0 255.255.0.0",
+            "vdom" : "WAN,HOSP,ADM"
+        },
+        {
+            "nombre" : "N_10.170.0.0_16-IDC1",
+            "tipo" : "ipmask",
+            "red" : "10.170.0.0 255.255.0.0",
+            "vdom" : "WAN,HOSP,ADM"
+        },
+        {
+            "nombre" : "N_10.0.0.0_8",
+            "tipo" : "ipmask",
+            "red" : "10.0.0.0 255.0.0.0",
+            "vdom" : "WAN,HOSP,ADM"
+        }
+    ],
+    "addrgrp" : [
+        {
+            "nombre" : "G-IDC",
+            "members" : "N-10.160.0.0_16-idc,N-10.170.0.0_16-idc,N-10.160.160.0_24-idc,N-10.160.170.0_24-idc,N-10.160.172.0_24-idc,N-10.166.0.0_16-idc,N-10.163.5.0_24-idc",
+            "vdom" : "root"
+        },
+        {
+            "nombre" : "G-CIBER-IPS_MALICIOSAS",
+            "members" : "N-INET-185.7.214.0,N-INET-77.73.133.0,N-INET-123.160.220.0,N-INET-45.83.64.0/22,N-INET-178.62.0.0,N-INET-154.89.5.0,H-INET-45.95.55.16,G-H-ARIBAU-HD-151,H-XXX-10.161.18.103,H-INET-120.86.239.11,H-INET-152.32.143.0,H-INET-2.57.122.98,H-INET-181.231.185.197,H-INET-62.233.50.179,H-INET-164.52.24.177,H-INET-64.227.97.195,H-INET-198.235.24.129,H-INET-154.89.5.84,H-INET-198.235.24.155,H-INET-205.210.31.137,H-INET-45.95.55.41,H-INET-104.156.155.30,H-INET-192.241.228.10,H-INET-192.241.235.168,H-INET-154.89.5.211,H-INET-205.210.31.25,H-INET-45.83.67.214,H-INET-45.83.67.184,H-INET-190.55.230.241,H-INET-198.235.24.159,H-INET-205.210.31.21,H-INET-154.89.5.213,H-INET-198.235.24.151,H-INET-120.232.172.189,H-INET-198.235.24.15,H-INET-45.95.55.74,H-INET-45.83.65.213,H-INET-45.83.64.3,H-INET-198.235.24.3,H-INET-45.83.67.178,H-INET-198.235.24.156,H-INET-164.52.24.190,H-INET-104.156.155.28,H-INET-31.7.58.162,H-INET-161.35.230.183,H-INET-161.35.238.241,H-INET-185.7.214.104,H-INET-81.213.175.254,H-INET-205.210.31.159,H-INET-151.216.10.56,H-INET-77.73.133.2,H-INET-198.235.24.28,H-INET-198.235.24.148,H-INET-205.210.31.28,H-INET-129.153.212.107,H-INET-104.218.165.26,H-INET-205.210.31.158,H-INET-167.71.209.116,H-INET-154.89.5.102,H-INET-154.89.5.113,H-INET-198.235.24.2,H-INET-205.210.31.31,H-INET-205.210.31.27,H-INET-198.235.24.27,H-INET-198.235.24.152,H-INET-188.75.173.116,H-INET-205.210.31.8,H-INET-14.160.24.140,H-INET-51.79.185.12,H-INET-205.210.31.156,H-INET-45.83.67.48,N-INET-205.210.31.0,N-INET-198.235.24.0,N-INET-164.52.24.0,N-INET-83.137.158.0,N-INET-109.206.241.0,N-INET-185.196.220.0,H-INET-109.205.213.20,H-INET-37.139.129.229,H-INET-107.182.129.190,H-INET-64.227.107.37,H-INET-152.32.150.177,H-INET-59.187.205.166,H-INET-37.44.238.187,H-INET-101.34.45.199,H-INET-154.89.5.100,H-INET-77.83.36.43,H-INET-202.5.52.110,H-INET-208.67.104.254,H-INET-103.251.167.21,H-INET-179.43.159.196,H-INET-162.218.126.136,H-INET-179.43.159.194,H-INET-23.175.48.58,H-INET-103.207.37.98,H-INET-45.250.65.188,H-INET-98.188.47.132,H-INET-119.92.71.123,H-INET-136.228.163.150,H-INET-216.169.73.65,H-INET-136.232.116.2,H-INET-179.191.125.202,H-INET-5.1.104.67,H-INET-187.85.6.5,H-INET-91.193.6.10,H-INET-45.129.32.4,N-INET-45.95.55.0,H-INET-54.36.173.175,H-INET-94.41.0.165,H-INET-223.82.91.196,H-INET-103.145.86.209,H-INET-154.61.227.9,H-INET-202.21.112.172,H-INET-125.167.32.158,H-INET-46.100.10.3,H-INET-36.94.8.19,H-INET-156.0.229.194,H-INET-1.192.188.59,H-INET-189.126.244.2,H-INET-154.117.212.18,H-INET-70.166.167.38,H-INET-202.53.172.75,H-INET-72.210.252.134,H-INET-45.153.241.162,H-INET-45.5.6.207,H-INET-37.139.129.11,H-INET-49.85.89.21,H-INET-103.138.56.3,H-INET-103.143.190.123,H-INET-185.174.159.132,H-INET-123.136.24.131,H-INET-122.194.184.138,H-INET-104.37.190.250,H-INET-203.158.181.91,H-INET-213.248.168.62,H-INET-104.156.155.29,H-INET-107.182.129.137,H-INET-192.183.198.216,H-INET-109.201.96.222,H-INET-186.47.213.158,H-INET-190.103.240.4,H-INET-157.100.56.94,H-INET-163.53.208.93,H-INET-27.42.168.46,H-INET-139.159.118.14,H-INET-131.221.165.53,H-INET-165.225.26.196,H-INET-67.22.223.9,H-INET-72.210.208.101,H-INET-72.221.171.135,H-INET-91.3.207.49,H-INET-95.31.35.210,H-INET-184.181.217.220,H-INET-98.162.25.7,H-INET-185.89.181.212,N-INET-208.67.104.0,N-INET-107.182.129.0,H-INET-185.220.102.242,H-INET-36.76.172.92,H-INET-109.188.124.135,H-INET-161.35.213.143,H-INET-113.219.210.242,H-INET-72.195.34.59,H-INET-170.238.79.2,H-INET-47.96.99.165,H-INET-175.43.109.195,H-INET-202.80.231.67,H-INET-85.202.169.117,H-INET-94.140.115.129,H-INET-208.67.105.35,H-INET-128.14.233.55,H-INET-42.236.10.72,H-INET-165.225.20.83,H-INET-148.153.97.211,N-INET-104.156.155.0,H-INET-179.43.139.202,H-INET-134.119.193.106,H-INET-217.131.28.13,H-INET-195.154.171.155,H-INET-192.241.206.211,H-INET-124.223.118.210,H-INET-84.224.193.200,H-INET-171.4.66.3,H-INET-139.59.210.73,H-INET-185.195.237.116,H-INET-109.167.134.253,H-INET-193.151.214.110,H-INET-103.253.154.155,H-INET-41.65.103.25",
+            "vdom" : "root"
+        },
+        {
+            "nombre" : "G-INTERNET",
+            "members" : "all",
+            "exclude" : "enable",
+            "exclude-members" : "N-10.0.0.0_8,N-192.168.0.0_16,N-172.16.0.0_12",
+            "vdom" : "root"
+        },
+        {
+            "nombre" : "G-WLC",
+            "members": "H-10.7.10.100,H-10.166.252.8,H-10.11.20.5,H-10.41.63.10,H-10.165.244.5,H-172.16.5.5,H-172.28.32.106,H-172.17.80.10,H-10.166.252.9,H-10.167.252.10,H-10.164.244.5,H-10.41.10.100,H-10.165.245.5,H-10.14.10.30,H-172.23.40.9,H-10.15.10.201,H-10.15.8.254,H-10.163.3.9,H-172.26.239.137,H-10.164.243.3,H-10.160.116.2,H-10.29.10.209,H-10.29.10.210,H-10.162.250.249,H-192.168.144.2,H-10.162.250.250,H-10.170.126.36,H-10.170.126.37",
+            "vdom" : "root"
+        },
+        {
+            "nombre" : "G-DEXEUS",
+            "members" : "N-10.100.100.0_24-dexeus,N-10.100.101.0_24-dexeus",
+            "vdom" : "root"
+        },
+        {
+            "nombre" : "G-AKAMAI",
+            "members": "Akamai-23.56.160.180,Akamai-23.56.161.180",
+            "vdom" : "root"
+        }],
+    "svcs" : [
+    {
+        "nombre":"DNS",
+        "category":"Network Services",
+        "protocol":"TCP\/UDP\/SCTP",
+        "tcpportrange":"53",
+        "udpportrange":"53"
+    },
+    {
+        "nombre":"OPEN-VPN",
+        "category":"Network Services",
+        "protocol":"TCP\/UDP\/SCTP",
+        "udpportrange":"1194"
+    },
+    {
+        "nombre":"NETBIOS_Name_Service",
+        "category":"Network Services",
+        "protocol":"TCP\/UDP\/SCTP",
+        "tcpportrange":"137",
+        "udpportrange":"137"
+    },
+    {
+        "nombre":"NETBIOS_Datagram_Service",
+        "category":"Network Services",
+        "protocol":"TCP\/UDP\/SCTP",
+        "tcpportrange":"138",
+        "udpportrange":"138"
+    },
+    {
+        "nombre":"NETBIOS_Sessions",
+        "category":"Network Services",
+        "protocol":"TCP\/UDP\/SCTP",
+        "tcpportrange":"139"
+    },
+    {
+        "nombre":"SNMP",
+        "category":"Network Services",
+        "protocol":"TCP\/UDP",
+        "tcpportrange":"161-162"
+    },
+    {
+        "nombre":"TCP-4440",
+        "category":"Uncategorized",
+        "protocol":"TCP",
+        "tcpportrange":"4440"
+    },
+    {
+        "nombre":"TCP-4444",
+        "category":"Uncategorized",
+        "protocol":"TCP",
+        "tcpportrange":"4444"
+    },
+    {
+        "nombre":"TCP-5660",
+        "category":"Uncategorized",
+        "protocol":"TCP",
+        "tcpportrange":"5660"
+    },
+    {
+        "nombre":"TCP-8081",
+        "category":"Uncategorized",
+        "protocol":"TCP",
+        "tcpportrange":"8081"
+    },
+    {
+        "nombre":"TCP-9044",
+        "category":"Uncategorized",
+        "protocol":"TCP",
+        "tcpportrange":"9044"
+    },
+    {
+        "nombre":"TCP-9055",
+        "category":"Uncategorized",
+        "protocol":"TCP",
+        "tcpportrange":"9055"
+    },
+    {
+        "nombre":"TCP-9903",
+        "category":"Uncategorized",
+        "protocol":"TCP",
+        "tcpportrange":"9903"
+    },
+    {
+        "nombre":"WUDO-TCP",
+        "category":"Uncategorized",
+        "protocol":"TCP",
+        "tcpportrange":"7680"
+    },
+    {
+        "nombre":"CAPWAP",
+        "category":"Uncategorized",
+        "protocol":"UDP",
+        "tcpportrange":"5246-5247"
+    }],
+    "politicas" : [
+    {
+        "VDOM":  "EXT",
+        "srcint":  "WIFI_PUB",
+        "dstint":  "TRANSPORTE_EXT",
+        "SRC":  "net_wifi_pub",
+        "DST":  "all",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "EXT",
+        "srcint":  "NOCORP_NET",
+        "dstint":  "TRANSPORTE_EXT",
+        "SRC":  "net_nocorp_net",
+        "DST":  "all",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "EXT",
+        "srcint":  "AUX_SERV",
+        "dstint":  "TRANSPORTE_EXT",
+        "SRC":  "net_aux_serv",
+        "DST":  "all",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "EXT",
+        "srcint":  "IOT",
+        "dstint":  "TRANSPORTE_EXT",
+        "SRC":  "net_iot",
+        "DST":  "all",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "EXT",
+        "srcint":  "WIFI_PRO",
+        "dstint":  "TRANSPORTE_EXT",
+        "SRC":  "net_wifi_pro",
+        "DST":  "all",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "EXT",
+        "srcint":  "TRANSPORTE_EXT",
+        "dstint":  "any",
+        "SRC":  "all",
+        "DST":  "all",
+        "SVC":  "all",
+        "ACTION":  "deny"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "any",
+        "dstint":  "TRANSPORTE",
+        "SRC":  "all",
+        "DST":  "G-CIBER-IPS_MALICIOSAS",
+        "SVC":  "all",
+        "ACTION":  "deny"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "TRANSPORTE",
+        "dstint":  "any",
+        "SRC":  "G-CIBER-IPS_MALICIOSAS",
+        "DST":  "all",
+        "SVC":  "all",
+        "ACTION":  "deny"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_bms_cableada",
+        "DST":  "net_sec_infra",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_bms_wireless",
+        "DST":  "net_sec_infra",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_bms_legacy",
+        "DST":  "net_sec_infra",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_bms_otros",
+        "DST":  "net_sec_infra",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_bms_control",
+        "DST":  "net_sec_infra",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_sec_infra",
+        "DST":  "net_bms_cableada",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_sec_infra",
+        "DST":  "net_bms_wireless",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_sec_infra",
+        "DST":  "net_bms_legacy",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_sec_infra",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "BMS",
+        "SRC":  "net_sec_infra",
+        "DST":  "net_bms_control",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "net_corp_user_wirel",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "net_electromedicina",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "net_voip",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "net_sighore",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "net_servers",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "net_corp_user_wired",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "net_voip",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "net_electromedicina",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "net_sighore",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "net_servers",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_sighore",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_servers",
+        "DST":  "net_corp_user_wired",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_servers",
+        "DST":  "net_corp_user_wirel",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_servers",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_servers",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_corp_user_wired",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_corp_user_wirel",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_servers",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_radiologia",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_laboratorio",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_ucis",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_electromedicina",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_radiologia_l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_laboratorio_l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_ucis_l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_electromed_l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_quirofanos",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_quirofanos_l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_wks_elm_labo",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_wks_elm_imagen",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_plexus",
+        "DST":  "net_wks_elm_diag",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_impresoras",
+        "DST":  "net_corp_user_wired",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_impresoras",
+        "DST":  "net_corp_user_wirel",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_impresoras",
+        "DST":  "net_servers",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_radiologia",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_radiologia",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_laboratorio",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_laboratorio",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_ucis",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_ucis",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_electromedicina",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_electromedicina",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_radiologia_l",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_radiologia_l",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_laboratorio_l",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_laboratorio_l",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_ucis_l",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_ucis_l",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_electromed_l",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_electromed_l",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_quirofanos",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_quirofanos",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_quirofanos_l",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_quirofanos_l",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_wks_elm_labo",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_wks_elm_labo",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_wks_elm_imagen",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_wks_elm_imagen",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_wks_elm_diag",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_wks_elm_diag",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_users_it",
+        "DST":  "net_sighore",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_users_it",
+        "DST":  "net_servers",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_users_it",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_users_it",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_users_it",
+        "DST":  "net_voip",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_voip",
+        "DST":  "net_corp_user_wired",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "HOSP",
+        "SRC":  "net_voip",
+        "DST":  "net_corp_user_wirel",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "ADM",
+        "dstint":  "WAN",
+        "SRC":  "net_mgmt_wired",
+        "DST":  "Monitoring",
+        "SVC":  "mon-svcs",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "ADM",
+        "dstint":  "WAN",
+        "SRC":  "net_mgmt_wireless",
+        "DST":  "Monitoring",
+        "SVC":  "mon-svcs",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "ADM",
+        "dstint":  "WAN",
+        "SRC":  "net_mgmt_wireless",
+        "DST":  "WLC",
+        "SVC":  "capwap",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "ADM",
+        "dstint":  "WAN",
+        "SRC":  "net_mgmt_wired",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "ADM",
+        "dstint":  "WAN",
+        "SRC":  "net_mgmt_wireless",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "ADM",
+        "dstint":  "WAN",
+        "SRC":  "net_sec_infra",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_labo",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_elecmd",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_labo-l",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_elecmd-l",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_quirof",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_wks_elm_diag",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_radio",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_ucis",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_radio-l",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_ucis-l",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_wks_elm_labo",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "BMS",
+        "SRC":  "net_wks_elm_imagen",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_corp_user_wired",
+        "DST":  "G-DEXEUS",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "G-DEXEUS",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_corp_user_wirel",
+        "DST":  "G-WLC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_sighore",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_sighore",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_servers",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_servers",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_plexus",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_plexus",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_impresoras",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_impresoras",
+        "DST":  "rfs-eu.kyocera.biz,rfs-eu.kyocera.biz",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_radio",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_radio",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_labo",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_labo",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_ucis",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_ucis",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_elecmd",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_elecmd",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_radio-l",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_radio-l",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_labo-l",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_labo-l",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_ucis-l",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_ucis-l",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_elecmd-l",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_elecmd-l",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_quirof",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_quirof",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_quirof-l",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_quirof-l",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_quirof-l",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_wks_elm_labo",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_wks_elm_labo",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_wks_elm_imagen",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_wks_elm_imagen",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_wks_elm_diag",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_wks_elm_diag",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_users_it",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_users_it",
+        "DST":  "G-INTERNET",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_voip",
+        "DST":  "G-IDC",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "BMS",
+        "SRC":  "G-IDC",
+        "DST":  "net_bms",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "BMS",
+        "SRC":  "G-IDC",
+        "DST":  "net_bms_wireless",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "BMS",
+        "SRC":  "G-IDC",
+        "DST":  "net_bms_legacy",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "BMS",
+        "SRC":  "G-IDC",
+        "DST":  "net_bms_otros",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "BMS",
+        "SRC":  "G-IDC",
+        "DST":  "net_bms_control",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_mgmt_wired",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_mgmt_wireless",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_sighore",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_servers",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_plexus",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_impresoras",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_radio",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_labo",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_ucis",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_elecmd",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_radio-l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_labo-l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_ucis-l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_elecmd-l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_quirof",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_quirof-l",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_wks_elm_labo",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_wks_elm_imagen",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_wks_elm_diag",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "net_users_it",
+        "SVC":  "all",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "N-PHILIPS",
+        "DST":  "net_elecmd",
+        "SVC":  "TCP-4440 TCP-4444 TCP-5660 TCP-8081 TCP-9044 TCP-9055 TCP-9903 FTP HTTP HTTPS RDP SSH TELNET VNC",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "N-PHILIPS",
+        "DST":  "net_elecmd-l",
+        "SVC":  "TCP-4440 TCP-4444 TCP-5660 TCP-8081 TCP-9044 TCP-9055 TCP-9903 FTP HTTP HTTPS RDP SSH TELNET VNC",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_elecmd",
+        "DST":  "N-PHILIPS",
+        "SVC":  "TCP-8081 HTTP HTTPS",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "net_elecmd-l",
+        "DST":  "N-PHILIPS",
+        "SVC":  "TCP-8081 HTTP HTTPS",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "N_GENERAL_ELECTRIC",
+        "DST":  "net_elecmd",
+        "SVC":  "ALL_ICMP FTP HTTP HTTPS REXEC SSH TELNET VNC",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "N_GENERAL_ELECTRIC",
+        "DST":  "net_elecmd-l",
+        "SVC":  "ALL_ICMP FTP HTTP HTTPS REXEC SSH TELNET VNC",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "HOSP",
+        "SRC":  "all",
+        "DST":  "all",
+        "SVC":  "WUDO",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "WAN",
+        "dstint":  "ADM",
+        "SRC":  "G-WLC",
+        "DST":  "net_mgmt_wireless",
+        "SVC":  "CAPWAP",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "ADM",
+        "dstint":  "WAN",
+        "SRC":  "net_mgmt_wireless",
+        "DST":  "G-WLC",
+        "SVC":  "CAPWAP",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "ADM",
+        "dstint":  "WAN",
+        "SRC":  "all",
+        "DST":  "G-AKAMAI",
+        "SVC":  "DNS",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "BMS",
+        "dstint":  "WAN",
+        "SRC":  "all",
+        "DST":  "G-AKAMAI",
+        "SVC":  "DNS",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "HOSP",
+        "dstint":  "WAN",
+        "SRC":  "all",
+        "DST":  "G-AKAMAI",
+        "SVC":  "DNS",
+        "ACTION":  "allow"
+    },
+    {
+        "VDOM":  "root",
+        "srcint":  "any",
+        "dstint":  "any",
+        "SRC":  "all",
+        "DST":  "all",
+        "SVC":  "all",
+        "ACTION":  "deny"
+    }]
+}

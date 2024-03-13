@@ -1,0 +1,180 @@
+{
+    "FWS": [
+        {
+        "nombre" : "CMTRC-100F-CMQSTRESCANTOS",
+        "IP" : "10.28.125.10",
+        "token" : "yQtnGGs9kjfNQ7x1f5xtH1rwp4r1zQ",
+        "tipo" : "I",
+        "LACP" : [{
+            "aggregates" : [
+            {
+                "nombre" : "LACP_CORP",
+                "members" : "port1.port2",
+                "tipo" : "aggregate",
+                "vdom" : "root"
+            },
+            {
+                "nombre" : "LACP_EXT",
+                "members" : "port3.port4",
+                "tipo" : "aggregate",
+                "vdom" : "root"
+            }
+            ]}],
+        "VDOM" : [                
+            {
+                "nombre" : "HOSP",
+                "ifs" : [
+                    {
+                        "nombre" : "CORP_USER_WIRED",
+                        "ip" : "0.0.0.0 0.0.0.0",
+                        "tipo" : "vlan",
+                        "vlan" : "100",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "CORP_USER_WIREL",
+                        "ip" : "10.28.247.1 255.255.255.0",
+                        "tipo" : "vlan",
+                        "vlan" : "101",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "IMPRESORAS",
+                        "ip" : "10.28.246.65 255.255.255.192",
+                        "tipo" : "vlan",
+                        "vlan" : "120",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "PLEXUS",
+                        "ip" : "10.28.246.1 255.255.255.192",
+                        "tipo" : "vlan",
+                        "vlan" : "121",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "ELECTROMEDICINA",
+                        "ip" : "10.28.122.225 255.255.255.224",
+                        "tipo" : "vlan",
+                        "vlan" : "133",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "RADIOLOGIA",
+                        "ip" : "10.28.246.145 255.255.255.240",
+                        "tipo" : "vlan",
+                        "vlan" : "130",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "VOIP",
+                        "ip" : "10.28.126.1 255.255.255.0",
+                        "tipo" : "vlan",
+                        "vlan" : "140",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "CUARENTENA",
+                        "ip" : "0.0.0.0 0.0.0.0",
+                        "tipo" : "vlan",
+                        "vlan" : "160",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "HOSP_WAN",
+                        "ip" : "203.0.113.1 255.255.255.252",
+                        "tipo" : "vlan",
+                        "vlan" : "4050",
+                        "parent" : "npu0_vlink0"
+                    }]
+            },
+            {
+                "nombre" : "WAN",
+                "ifs" : [
+                    {
+                        "nombre" : "TRANSPORTE",
+                        "ip" : "0.0.0.0 0.0.0.0",
+                        "tipo" : "vlan",
+                        "vlan" : "800",
+                        "gw" : "10.38.250.17",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "WAN_HOSP",
+                        "ip" : "203.0.113.2 255.255.255.252",
+                        "tipo" : "vlan",
+                        "vlan" : "4050",
+                        "parent" : "npu0_vlink1"
+                    },
+                    {
+                        "nombre" : "WAN_ADM",
+                        "ip" : "203.0.113.6 255.255.255.252",
+                        "tipo" : "vlan",
+                        "vlan" : "4052",
+                        "parent" : "npu0_vlink1"
+                    },
+                    {
+                        "nombre" : "WAN_BMS",
+                        "ip" : "203.0.113.10 255.255.255.252",
+                        "tipo" : "vlan",
+                        "vlan" : "4051",
+                        "parent" : "npu0_vlink1"
+                    }]
+            },
+            {
+                "nombre" : "ADM",
+                "ifs" : [
+                    {
+                        "nombre" : "MGMT_WIRED",
+                        "ip" : "0.0.0.0 0.0.0.0",
+                        "tipo" : "vlan",
+                        "vlan" : "900",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "MGMT_WIRELESS",
+                        "ip" : "10.28.246.129 255.255.255.240",
+                        "tipo" : "vlan",
+                        "vlan" : "901",
+                        "parent" : "LACP_CORP"
+                    },
+                    {
+                        "nombre" : "ADM_WAN",
+                        "ip" : "203.0.113.5 255.255.255.252",
+                        "tipo" : "vlan",
+                        "vlan" : "4052",
+                        "parent" : "npu0_vlink0"
+                    }]
+            },
+            {
+                "nombre" : "BMS",
+                "ifs" : [
+                    {
+                        "nombre" : "BMS_WAN",
+                        "ip" : "203.0.113.9 255.255.255.252",
+                        "tipo" : "vlan",
+                        "vlan" : "4051",
+                        "parent" : "npu0_vlink0"
+                    }]
+            },
+            {
+                "nombre" : "EXT",
+                "ifs" : [
+                    {
+                        "nombre" : "TRANSPORTE_EXT",
+                        "ip" : "0.0.0.0 0.0.0.0",
+                        "tipo" : "vlan",
+                        "vlan" : "399",
+                        "parent" : "LACP_EXT"
+                    },
+                    {
+                        "nombre" : "WIFI_PUB",
+                        "ip" : "192.168.2.15 255.255.255.0",
+                        "tipo" : "vlan",
+                        "vlan" : "300",
+                        "parent" : "LACP_EXT"
+                    }]
+            }]
+    }
+    ]
+}

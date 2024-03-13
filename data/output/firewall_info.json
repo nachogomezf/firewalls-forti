@@ -1,0 +1,624 @@
+{
+    "address": [
+        {
+            "nombre": "FABRIC_DEVICE",
+            "tipo": "ipmask",
+            "red": "0.0.0.0 0.0.0.0",
+            "vdom": "root"
+        },
+        {
+            "nombre": "FIREWALL_AUTH_PORTAL_ADDRESS",
+            "tipo": "ipmask",
+            "red": "0.0.0.0 0.0.0.0",
+            "vdom": "root"
+        },
+        {
+            "nombre": "all",
+            "tipo": "ipmask",
+            "red": "0.0.0.0 0.0.0.0",
+            "vdom": "root"
+        },
+        {
+            "nombre": "none",
+            "tipo": "ipmask",
+            "red": "0.0.0.0 255.255.255.255",
+            "vdom": "root"
+        },
+        {
+            "nombre": "test",
+            "tipo": "ipmask",
+            "red": "192.168.0.0 255.255.0.0",
+            "vdom": "root"
+        }
+    ],
+    "addrgrp": [
+        {
+            "nombre": "G Suite",
+            "members": "gmail.com,wildcard.google.com",
+            "vdom": "root"
+        },
+        {
+            "nombre": "Microsoft Office 365",
+            "members": "login.microsoftonline.com,login.microsoft.com,login.windows.net",
+            "vdom": "root"
+        }
+    ],
+    "svcs": [
+        {
+            "nombre": "DNS",
+            "category": "Network Services",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "53",
+            "udpportrange": "53"
+        },
+        {
+            "nombre": "HTTP",
+            "category": "Web Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "80"
+        },
+        {
+            "nombre": "HTTPS",
+            "category": "Web Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "443"
+        },
+        {
+            "nombre": "IMAP",
+            "category": "Email",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "143"
+        },
+        {
+            "nombre": "IMAPS",
+            "category": "Email",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "993"
+        },
+        {
+            "nombre": "LDAP",
+            "category": "Authentication",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "389"
+        },
+        {
+            "nombre": "DCE-RPC",
+            "category": "Remote Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "135",
+            "udpportrange": "135"
+        },
+        {
+            "nombre": "POP3",
+            "category": "Email",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "110"
+        },
+        {
+            "nombre": "POP3S",
+            "category": "Email",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "995"
+        },
+        {
+            "nombre": "SAMBA",
+            "category": "File Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "139"
+        },
+        {
+            "nombre": "SMTP",
+            "category": "Email",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "25"
+        },
+        {
+            "nombre": "SMTPS",
+            "category": "Email",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "465"
+        },
+        {
+            "nombre": "KERBEROS",
+            "category": "Authentication",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "88 464",
+            "udpportrange": "88 464"
+        },
+        {
+            "nombre": "LDAP_UDP",
+            "category": "Authentication",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "389"
+        },
+        {
+            "nombre": "SMB",
+            "category": "File Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "445"
+        },
+        {
+            "nombre": "FTP",
+            "category": "File Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "21"
+        },
+        {
+            "nombre": "FTP_GET",
+            "category": "File Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "21"
+        },
+        {
+            "nombre": "FTP_PUT",
+            "category": "File Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "21"
+        },
+        {
+            "nombre": "ALL",
+            "category": "General",
+            "protocol": "IP"
+        },
+        {
+            "nombre": "ALL_TCP",
+            "category": "General",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1-65535"
+        },
+        {
+            "nombre": "ALL_UDP",
+            "category": "General",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "1-65535"
+        },
+        {
+            "nombre": "ALL_ICMP",
+            "category": "General",
+            "protocol": "ICMP"
+        },
+        {
+            "nombre": "ALL_ICMP6",
+            "category": "General",
+            "protocol": "ICMP6"
+        },
+        {
+            "nombre": "GRE",
+            "category": "Tunneling",
+            "protocol": "IP"
+        },
+        {
+            "nombre": "AH",
+            "category": "Tunneling",
+            "protocol": "IP"
+        },
+        {
+            "nombre": "ESP",
+            "category": "Tunneling",
+            "protocol": "IP"
+        },
+        {
+            "nombre": "AOL",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "5190-5194"
+        },
+        {
+            "nombre": "BGP",
+            "category": "Network Services",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "179"
+        },
+        {
+            "nombre": "DHCP",
+            "category": "Network Services",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "67-68"
+        },
+        {
+            "nombre": "FINGER",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "79"
+        },
+        {
+            "nombre": "GOPHER",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "70"
+        },
+        {
+            "nombre": "H323",
+            "category": "VoIP, Messaging & Other Applications",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1720 1503",
+            "udpportrange": "1719"
+        },
+        {
+            "nombre": "IKE",
+            "category": "Tunneling",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "500 4500"
+        },
+        {
+            "nombre": "Internet-Locator-Service",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "389"
+        },
+        {
+            "nombre": "IRC",
+            "category": "VoIP, Messaging & Other Applications",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "6660-6669"
+        },
+        {
+            "nombre": "L2TP",
+            "category": "Tunneling",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1701",
+            "udpportrange": "1701"
+        },
+        {
+            "nombre": "NetMeeting",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1720"
+        },
+        {
+            "nombre": "NFS",
+            "category": "File Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "111 2049",
+            "udpportrange": "111 2049"
+        },
+        {
+            "nombre": "NNTP",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "119"
+        },
+        {
+            "nombre": "NTP",
+            "category": "Network Services",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "123",
+            "udpportrange": "123"
+        },
+        {
+            "nombre": "OSPF",
+            "category": "Network Services",
+            "protocol": "IP"
+        },
+        {
+            "nombre": "PC-Anywhere",
+            "category": "Remote Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "5631",
+            "udpportrange": "5632"
+        },
+        {
+            "nombre": "PING",
+            "category": "Network Services",
+            "protocol": "ICMP"
+        },
+        {
+            "nombre": "TIMESTAMP",
+            "category": "",
+            "protocol": "ICMP"
+        },
+        {
+            "nombre": "INFO_REQUEST",
+            "category": "",
+            "protocol": "ICMP"
+        },
+        {
+            "nombre": "INFO_ADDRESS",
+            "category": "",
+            "protocol": "ICMP"
+        },
+        {
+            "nombre": "ONC-RPC",
+            "category": "Remote Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "111",
+            "udpportrange": "111"
+        },
+        {
+            "nombre": "PPTP",
+            "category": "Tunneling",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1723"
+        },
+        {
+            "nombre": "QUAKE",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "26000 27000 27910 27960"
+        },
+        {
+            "nombre": "RAUDIO",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "7070"
+        },
+        {
+            "nombre": "REXEC",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "512"
+        },
+        {
+            "nombre": "RIP",
+            "category": "Network Services",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "520"
+        },
+        {
+            "nombre": "RLOGIN",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "513:512-1023"
+        },
+        {
+            "nombre": "RSH",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "514:512-1023"
+        },
+        {
+            "nombre": "SCCP",
+            "category": "VoIP, Messaging & Other Applications",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "2000"
+        },
+        {
+            "nombre": "SIP",
+            "category": "VoIP, Messaging & Other Applications",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "5060",
+            "udpportrange": "5060"
+        },
+        {
+            "nombre": "SIP-MSNmessenger",
+            "category": "VoIP, Messaging & Other Applications",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1863"
+        },
+        {
+            "nombre": "SNMP",
+            "category": "Network Services",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "161-162",
+            "udpportrange": "161-162"
+        },
+        {
+            "nombre": "SSH",
+            "category": "Remote Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "22"
+        },
+        {
+            "nombre": "SYSLOG",
+            "category": "Network Services",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "514"
+        },
+        {
+            "nombre": "TALK",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "517-518"
+        },
+        {
+            "nombre": "TELNET",
+            "category": "Remote Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "23"
+        },
+        {
+            "nombre": "TFTP",
+            "category": "File Access",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "69"
+        },
+        {
+            "nombre": "MGCP",
+            "category": "VoIP, Messaging & Other Applications",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "2428",
+            "udpportrange": "2427 2727"
+        },
+        {
+            "nombre": "UUCP",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "540"
+        },
+        {
+            "nombre": "VDOLIVE",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "7000-7010"
+        },
+        {
+            "nombre": "WAIS",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "210"
+        },
+        {
+            "nombre": "WINFRAME",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1494 2598"
+        },
+        {
+            "nombre": "X-WINDOWS",
+            "category": "Remote Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "6000-6063"
+        },
+        {
+            "nombre": "PING6",
+            "category": "",
+            "protocol": "ICMP6"
+        },
+        {
+            "nombre": "MS-SQL",
+            "category": "VoIP, Messaging & Other Applications",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1433 1434"
+        },
+        {
+            "nombre": "MYSQL",
+            "category": "VoIP, Messaging & Other Applications",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "3306"
+        },
+        {
+            "nombre": "RDP",
+            "category": "Remote Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "3389"
+        },
+        {
+            "nombre": "VNC",
+            "category": "Remote Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "5900"
+        },
+        {
+            "nombre": "DHCP6",
+            "category": "Network Services",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "546 547"
+        },
+        {
+            "nombre": "SQUID",
+            "category": "Tunneling",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "3128"
+        },
+        {
+            "nombre": "SOCKS",
+            "category": "Tunneling",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1080",
+            "udpportrange": "1080"
+        },
+        {
+            "nombre": "WINS",
+            "category": "Remote Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1512",
+            "udpportrange": "1512"
+        },
+        {
+            "nombre": "RADIUS",
+            "category": "Authentication",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "1812 1813"
+        },
+        {
+            "nombre": "RADIUS-OLD",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "1645 1646"
+        },
+        {
+            "nombre": "CVSPSERVER",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "2401",
+            "udpportrange": "2401"
+        },
+        {
+            "nombre": "AFS3",
+            "category": "File Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "7000-7009",
+            "udpportrange": "7000-7009"
+        },
+        {
+            "nombre": "TRACEROUTE",
+            "category": "Network Services",
+            "protocol": "TCP/UDP/SCTP",
+            "udpportrange": "33434-33535"
+        },
+        {
+            "nombre": "RTSP",
+            "category": "VoIP, Messaging & Other Applications",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "554 7070 8554",
+            "udpportrange": "554"
+        },
+        {
+            "nombre": "MMS",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "1755",
+            "udpportrange": "1024-5000"
+        },
+        {
+            "nombre": "NONE",
+            "category": "",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "0"
+        },
+        {
+            "nombre": "webproxy",
+            "category": "Web Proxy",
+            "protocol": "ALL",
+            "tcpportrange": "0-65535:0-65535"
+        },
+        {
+            "nombre": "svc test",
+            "category": "File Access",
+            "protocol": "TCP/UDP/SCTP",
+            "tcpportrange": "123-124"
+        }
+    ],
+    "politicas": [
+        {
+            "VDOM": "root",
+            "srcint": "port5",
+            "dstint": "port6",
+            "SRC": "gmail.com",
+            "DST": "login.microsoftonline.com",
+            "ACTION": "accept"
+        },
+        {
+            "VDOM": "root",
+            "srcint": "port8",
+            "dstint": "port9",
+            "SRC": "G Suite",
+            "DST": "Microsoft Office 365",
+            "ACTION": "deny"
+        },
+        {
+            "VDOM": "root",
+            "srcint": "port8",
+            "dstint": "Any",
+            "SRC": "G Suite",
+            "DST": "Microsoft Office 365",
+            "ACTION": "deny"
+        },
+        {
+            "VDOM": "root",
+            "srcint": "any",
+            "dstint": "Any",
+            "SRC": "G Suite",
+            "DST": "Microsoft Office 365",
+            "ACTION": "deny"
+        },
+        {
+            "VDOM": "root",
+            "srcint": "port9",
+            "dstint": "port10",
+            "SRC": "Microsoft Office 365",
+            "DST": "G Suite",
+            "ACTION": "accept"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+VDOM,srcint,dstint,SRC,DST,ACTION
+EXT,WIFI_PUB,TRANSPORTE_EXT,net_wifi_pub,all,all,allow
+EXT,TRANSPORTE_EXT,any,all,all,all,deny
+root,any,TRANSPORTE,all,G-CIBER-IPS_MALICIOSAS,all,deny
+root,TRANSPORTE,any,G-CIBER-IPS_MALICIOSAS,all,all,deny
+root,TRANSPORTE,ANY,G-CIBER-IPS_MALICIOSAS,all,all,deny
+root,any,any,all,all,all,deny

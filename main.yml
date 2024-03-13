@@ -1,0 +1,23 @@
+---
+- name: On top
+  hosts: localhost
+  gather_facts: false
+  vars:
+    - extract_script: "scripts/script.py"
+    - compare_script: "scripts/compare.py"
+    - directorio_output: "data/output"
+
+  tasks:
+    - name: Creacion directorio output
+      ansible.builtin.file:
+        path: "{{ directorio_output }}"
+        state: directory
+
+    - name: Extracción información del firewall
+      ansible.builtin.command: python3 {{ extract_script }}
+
+    - name: Comparación info
+      ansible.builtin.command: python3 {{ compare_script }}
+
+    - name: Script python 
+      ansible.builtin.command: python3 "scripts/prueba.py"

@@ -1,0 +1,444 @@
+{
+    "politicas": [
+        {
+            "VDOM": "HOSP",
+            "srcint": "CORP_USER_WIRED",
+            "dstint": "PLEXUS"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "CORP_USER_WIRED",
+            "dstint": "VOIP"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "CORP_USER_WIRED",
+            "dstint": "IMPRESORAS"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "CORP_USER_WIRED",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "IMPRESORAS",
+            "dstint": "CORP_USER_WIRED"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "IMPRESORAS",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "IMPRESORAS",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "PLEXUS",
+            "dstint": "CORP_USER_WIRED"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "PLEXUS",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "PLEXUS",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "ELECTROMEDICINA",
+            "dstint": "PLEXUS"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "ELECTROMEDICINA",
+            "dstint": "IMPRESORAS"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "ELECTROMEDICINA",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "ELECTROMEDICINA",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "RADIOLOGIA",
+            "dstint": "PLEXUS"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "RADIOLOGIA",
+            "dstint": "IMPRESORAS"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "RADIOLOGIA",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "VOIP",
+            "dstint": "CORP_USER_WIRED"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "VOIP",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "CUARENTENA",
+            "dstint": "HOSP_WAN"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "HOSP_WAN",
+            "dstint": "PLEXUS"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "HOSP_WAN",
+            "dstint": "IMPRESORAS"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "HOSP_WAN",
+            "dstint": "RADIOLOGIA"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "HOSP_WAN",
+            "dstint": "ELECTROMEDICINA"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "HOSP_WAN",
+            "dstint": "ELECTROMEDICINA"
+        },
+        {
+            "VDOM": "HOSP",
+            "srcint": "HOSP_WAN",
+            "dstint": "ELECTROMEDICINA"
+        },
+        {
+            "VDOM": "ADM",
+            "srcint": "MGMT_WIRED",
+            "dstint": "ADM_WAN"
+        },
+        {
+            "VDOM": "ADM",
+            "srcint": "MGMT_WIRELESS",
+            "dstint": "ADM_WAN"
+        },
+        {
+            "VDOM": "ADM",
+            "srcint": "MGMT_WIRELESS",
+            "dstint": "ADM_WAN"
+        },
+        {
+            "VDOM": "ADM",
+            "srcint": "ADM_WAN",
+            "dstint": "MGMT_WIRED"
+        },
+        {
+            "VDOM": "ADM",
+            "srcint": "ADM_WAN",
+            "dstint": "MGMT_WIRELESS"
+        },
+        {
+            "VDOM": "ADM",
+            "srcint": "ADM_WAN",
+            "dstint": "MGMT_WIRELESS"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_ADM"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_BMS"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_BMS",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_ADM",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_BMS",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_BMS",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_BMS",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_BMS",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "WAN_BMS"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "WAN_HOSP",
+            "dstint": "SDWAN"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_ADM"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_ADM"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "SDWAN",
+            "dstint": "WAN_HOSP"
+        },
+        {
+            "VDOM": "WAN",
+            "srcint": "any",
+            "dstint": "any"
+        }
+    ]
+}
