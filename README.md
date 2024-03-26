@@ -12,11 +12,7 @@ Antes de utilizar este repositorio, asegúrate de tener instalado lo siguiente:
 
 ## Instalación de dependencias
 
-Una vez que tienes Python, Pip y Git instalados, necesitas instalar las siguientes librerías. Puedes hacerlo ejecutando el siguiente comando:
 
-```bash
-pip install -r requirements.txt
-````
 
 Una vez esté todo instalado, vamos a clonar el repositorio y ejecutar los siguientes scripts
 
@@ -29,6 +25,18 @@ Después de clonar el repositorio, navega a la carpeta del repositorio clonado:
 ````
 cd firewalls-forti
 ````
+Una vez que tienes Python, Pip y Git instalados, necesitas instalar las siguientes librerías. Puedes hacerlo ejecutando el siguiente comando:
+
+```bash
+pip install -r requirements.txt
+````
+Si no se instala correctamente el modulo de `request` habrá que instalarlo mediante el siguiente comando
+
+````
+python -m pip install requests
+
+````
+
 Hay que tener en cuenta que hay que modificar el archivo ``vars_globales.json`` indicando el ``token`` e ``ip`` del firewall.
 
 Este archivo se encuentra en la ruta ``firewalls-forti/data/info``.
