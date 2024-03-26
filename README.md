@@ -55,6 +55,12 @@ python3 scripts/compare.py
 python3 scripts/prueba.py
 ````
 
+Si se prefiere se puede ejecutar el siguiente script para poder ejecutar todos los scripts en el orden indicado
+
+````
+./main.bat
+````
+
 Esto ejecutará los scripts para obtener los datos del firewall, compararlos y realizar una segunda comparación ya filtrada. Asegúrate de estar en el directorio correcto (donde se encuentra el repositorio clonado) al ejecutar estos comandos.
 
 Podremos ver las políticas que son necesarias y las políticas que sobran en la carpeta:
