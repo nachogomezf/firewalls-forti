@@ -1,1 +1,6 @@
 VDOM,srcint,dstint,SRC,DST,SVC,ACTION
+root,port5,port6,gmail.com,login.microsoftonline.com,,accept
+root,port8,port9,G Suite,Microsoft Office 365,,deny
+root,port8,Any,G Suite,Microsoft Office 365,,deny
+root,any,Any,G Suite,Microsoft Office 365,,deny
+root,port9,port10,Microsoft Office 365,G Suite,,accept

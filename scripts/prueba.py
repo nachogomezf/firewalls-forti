@@ -83,7 +83,9 @@ def clean_politics(filename, vdom_info):
 
     for elem in delete_list:
         interfaces = get_interfaces(vdom_info=vdom_info, name=elem['VDOM'])
-        if elem['srcint'] in interfaces and elem['dstint'] in interfaces:
+        srcint_lower = elem['srcint'].lower()
+        dstint_lower = elem['dstint'].lower()
+        if (srcint_lower in interfaces and dstint_lower in interfaces) or (len(interfaces) == 0):
             new_politics_delete.append(elem)
 
     return new_politics_add, new_politics_delete
@@ -127,18 +129,12 @@ if __name__ == "__main__":
                 "dstint": elem["dstint"]
             })
 
-    json_output = {
-        "politicas": vdom_info
-    }
-
-    write_file("data/test/test.json", json_output)
-
     file_data = read_file(filename="data/output/comparation.json")
     new_politics_add, new_politics_delete = clean_politics(filename="data/output/comparation.json", vdom_info=info_vdoms)
 
     write_file("data/output/comparation_v2.json", {
         "address": file_data['address'],
-        "addrgrp": file_data['addrgrp'],
+        "addrgrps": file_data['addrgrps'],
         "svcs": file_data['svcs'],
         "politicas": {
             "add": new_politics_add,
@@ -164,4 +160,9 @@ if __name__ == "__main__":
         writer.writerow(["VDOM", "srcint", "dstint", "SRC", "DST", "SVC", "ACTION"])
 
         for politica in new_politics_delete:
-            writer.writerow([politica["VDOM"], politica["srcint"], politica["dstint"], politica["SRC"],politica["DST"],politica["SVC"],politica["ACTION"]])
+            if("SVC" in politica.keys()):
+                writer.writerow([politica["VDOM"], politica["srcint"], politica["dstint"], politica["SRC"],politica["DST"],politica["SVC"],politica["ACTION"]])
+            else:
+                writer.writerow([politica["VDOM"], politica["srcint"], politica["dstint"], politica["SRC"],politica["DST"],"",politica["ACTION"]])
+
+            

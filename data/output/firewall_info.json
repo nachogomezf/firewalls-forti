@@ -31,7 +31,7 @@
             "vdom": "root"
         }
     ],
-    "addrgrp": [
+    "addrgrps": [
         {
             "nombre": "G Suite",
             "members": "gmail.com,wildcard.google.com",
