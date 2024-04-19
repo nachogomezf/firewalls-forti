@@ -54,11 +54,11 @@ if __name__ == "__main__":
     output = []     # Array con el resultado final de todas las comparaciones
 
     for name in elems:
-        output.append(compare(data=data, data_objective=data_objective, name=name))
+        output.append(compare(data=data, data_objective=data_objective, name='politicas'))
 
     write_file("data/output/comparation.json", {
-        list(output[0].keys())[0]: output[0][list(output[0].keys())[0]],
-        list(output[1].keys())[0]: output[1][list(output[1].keys())[0]],
-        list(output[2].keys())[0]: output[2][list(output[2].keys())[0]],
-        list(output[3].keys())[0]: output[3][list(output[3].keys())[0]]
+         list(output[0].keys())[0]: output[0][list(output[0].keys())[0]]
+        # list(output[1].keys())[0]: output[1][list(output[1].keys())[0]],
+        # list(output[2].keys())[0]: output[2][list(output[2].keys())[0]],
+        # list(output[3].keys())[0]: output[3][list(output[3].keys())[0]]
     })
