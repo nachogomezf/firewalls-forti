@@ -38,18 +38,22 @@ def get_interfaces_by_VDOM(VDOM, vdom_data):
 
     return result
 
-def check_interfaces(vdom_info, policies):
+def check_interfaces(vdom_info, policies, vdom_list):
 
     vdom_results = []
 
     for interfaz in vdom_info["interfaces"]:
+    #for interfaz in vdom_info["vdom_name"]:
+        interfaz = interfaz.lower()
         for policy in policies:
-            srcint = policy["srcint"]
+            #srcint = policy["srcint"]
+            srcint = policy["SRC"].lower()
             if interfaz == srcint:
                 if policy["dstint"] in vdom_info["interfaces"]:
+                #if policy["DST"] in vdom_list:
                     vdom_results.append({
                         "srcint": srcint,
-                        "dstint": policy["dstint"]
+                        "dstint": policy["DST"]
                     })
 
     return vdom_results
@@ -58,7 +62,9 @@ def get_interfaces(vdom_info, name):
     result = []
 
     for elem in vdom_info:
-        if elem["vdom_name"] == name:
+        vdom_name_lower = elem['vdom_name'].lower()
+        name_lower = name.lower()
+        if vdom_name_lower == name_lower:
             result = elem["interfaces"]
 
     return result
@@ -75,14 +81,18 @@ def clean_politics(filename, vdom_info):
 
     for elem in add_list:
         interfaces = get_interfaces(vdom_info=vdom_info, name=elem['VDOM'])
+        #print(interfaces)
         srcint_lower = elem['srcint'].lower()
         dstint_lower = elem['dstint'].lower()
-        if srcint_lower == 'any' or dstint_lower == 'any' or (elem['srcint'] in interfaces and elem['dstint'] in interfaces):
+        if (srcint_lower == 'any' or dstint_lower == 'any') or (elem['srcint'] in interfaces and elem['dstint'] in interfaces):
             new_politics_add.append(elem)
 
+    print(interfaces)
+    print()
 
     for elem in delete_list:
         interfaces = get_interfaces(vdom_info=vdom_info, name=elem['VDOM'])
+        print(interfaces)
         srcint_lower = elem['srcint'].lower()
         dstint_lower = elem['dstint'].lower()
         if (srcint_lower in interfaces and dstint_lower in interfaces) or (len(interfaces) == 0):
@@ -97,22 +107,28 @@ if __name__ == "__main__":
 
     info_vdoms = [] # Info de los VDOM { "vdom_name: nombre, "interfaces": array interfaces }
 
+    vdom_names_list = []
+
     for vdom in vdom_names:
         ifs = get_interfaces_by_VDOM(vdom, vdoms_general)
         info = {
             "vdom_name": vdom,
             "interfaces": ifs
         }
+        vdom_names_list.append(vdom)
         info_vdoms.append(info)
 
-    policies_data = read_file("references/pols_type_I.json")
+    policies_data = read_file("references/pols_type_II.json")
     policies_data = policies_data["politicas"]
 
     vdom_info = []
 
     for vdom in info_vdoms:
         if vdom["vdom_name"] != "WAN":
-            info = check_interfaces(vdom_info=vdom, policies=policies_data)
+            info = check_interfaces(vdom_info=vdom, policies=policies_data, vdom_list=vdom_names_list)
+
+            print(info)
+            print()
             
             for elem in info:
                 vdom_info.append({

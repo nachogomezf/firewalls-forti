@@ -1,6 +1,40 @@
 VDOM,srcint,dstint,SRC,DST,SVC,ACTION
-root,port5,port6,gmail.com,login.microsoftonline.com,,accept
-root,port8,port9,G Suite,Microsoft Office 365,,deny
-root,port8,Any,G Suite,Microsoft Office 365,,deny
-root,any,Any,G Suite,Microsoft Office 365,,deny
-root,port9,port10,Microsoft Office 365,G Suite,,accept
+root,any,virtual-wan-link,all,G-CIBER-IPS_MALICIOSAS,,deny
+root,virtual-wan-link,any,G-CIBER-IPS_MALICIOSAS,all,,deny
+root,Z_HOSP,Z_HOSP,N_CMQSCAR_Corp_Users_Wired,N_CMQSCAR_Corp_Users_Wired,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Corp_Users_Wired,H-HQMUR-MURPRT01,,accept
+root,virtual-wan-link,Z_HOSP,H-HQMUR-MURPRT01,N_CMQSCAR_Impresoras,,accept
+root,Z_HOSP,Z_HOSP,N_CMQSCAR_Corp_Users_Wired,N_CMQSCAR_Impresoras,,accept
+root,Z_HOSP,Z_HOSP,N_CMQSCAR_Corp_Users_Wired,N_CMQSCAR_Plexus,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Corp_Users_Wired,H-10.30.100.22-ServMurcia2,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Corp_Users_Wired,H-10.100.101.132-ServidorDexeus,,accept
+root,Z_HOSP,Z_HOSP,N_CMQSCAR_Corp_Users_Wireless,N_CMQSCAR_Impresoras,,accept
+root,Z_HOSP,Z_HOSP,N_CMQSCAR_Corp_Users_Wireless,N_CMQSCAR_Plexus,,accept
+root,Z_HOSP,Z_HOSP,N_CMQSCAR_Impresoras,N_CMQSCAR_Corp_Users_Wired,,accept
+root,Z_HOSP,Z_HOSP,N_CMQSCAR_Impresoras,N_CMQSCAR_Corp_Users_Wireless,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Impresoras,G-IDC,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Impresoras,H-104.46.60.117-kyocera,,accept
+root,virtual-wan-link,Z_HOSP,G-IDC,N_CMQSCAR_Impresoras,,accept
+root,Z_HOSP,Z_HOSP,N_CMQSCAR_Plexus,N_CMQSCAR_Corp_Users_Wired,,accept
+root,Z_HOSP,Z_HOSP,N_CMQSCAR_Plexus,N_CMQSCAR_Corp_Users_Wireless,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Plexus,G-IDC,,accept
+root,virtual-wan-link,Z_HOSP,G-IDC,N_CMQSCAR_Plexus,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Electro,G-IDC,,accept
+root,virtual-wan-link,Z_HOSP,G-IDC,N_CMQSCAR_Electro,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Radiologia,G-IDC,,accept
+root,virtual-wan-link,Z_HOSP,G-IDC,N_CMQSCAR_Radiologia,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Telederma,G-IDC,,accept
+root,virtual-wan-link,Z_HOSP,G-IDC,N_CMQSCAR_Telederma,,accept
+root,Z_ADM,virtual-wan-link,N_CMQSCAR_Mgmt_Wired,G_IDC,,accept
+root,virtual-wan-link,Z_ADM,G_IDC,N_CMQSCAR_Mgmt_Wired,,accept
+root,Z_ADM,virtual-wan-link,N_CMQSCAR_Mgmt_Wireless,G_WLC,,accept
+root,virtual-wan-link,Z_ADM,G_WLC,N_CMQSCAR_Mgmt_Wireless,,accept
+root,virtual-wan-link,Z_ADM,N_USERS_IT_MUR,all,,accept
+root,virtual-wan-link,Z_BMS,N_USERS_IT_MUR,all,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Corp_Users_Wired,G_INTERNET,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Corp_Users_Wired,G-IDC,,accept
+root,virtual-wan-link,Z_HOSP,G-IDC,N_CMQSCAR_Corp_Users_Wired,,accept
+root,virtual-wan-link,Z_HOSP,all,all,,accept
+root,Z_HOSP,virtual-wan-link,all,all,,accept
+root,Z_HOSP,virtual-wan-link,N_CMQSCAR_Corp_Users_Wired,all,,accept
+root,any,any,all,all,,accept
