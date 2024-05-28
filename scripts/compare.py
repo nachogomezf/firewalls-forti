@@ -44,7 +44,7 @@ if __name__ == "__main__":
     #file_data = "data/output.json"
     # file_data = "data/output_test.json"
     file_data = "data/output/firewall_info.json"
-    file_objective = "references/pols_type_II.json"
+    file_objective = "references/pols_type_I.json"
     # file_objective = "references/test.json"
 
     data = read_file(filename=file_data)

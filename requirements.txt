@@ -1,3 +1,7 @@
 numpy
 requests
 pandas
+fpd2
+
+
+# pip install fpdf2

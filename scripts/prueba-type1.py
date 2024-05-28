@@ -100,6 +100,92 @@ def clean_politics(filename, vdom_info):
 
     return new_politics_add, new_politics_delete
 
+
+#################################
+#################################
+#################################
+
+def clean_politics2(filename, vdom_info):
+    data_politics = read_file(filename=filename)
+    data_politics = data_politics["politicas"]
+
+    add_list = data_politics["add"]
+    delete_list = data_politics["delete"]
+
+    # vdom_info -> vdom e interfaces
+
+    new_politics_add = []
+    new_politics_delete = []
+
+### Explicación ####
+# Miramos los elementos que hay que añadir
+# Comprobamos que el vdom de la política lo tenga nuestro firewall
+# Comprobamos que las interfaces de origen y destino de la política estén definidos en el VDOm de nuestro firewall
+# También puede darse el caso de que la interfaz origen o destino sea any.
+# En caso de que se cumpla se añade a la lista
+
+# Si el VDOM es WAN se añade directamente la política
+####################
+
+    for elem in add_list:
+        for vdom_individual in vdom_info:
+            if(elem["VDOM"] == "WAN"):
+                new_politics_add.append(elem)
+                break  # Sino se guarda por cada iteración de vdom
+            elif(elem["VDOM"] == vdom_individual["vdom_name"]):
+                srcint_lower = elem['srcint'].lower()
+                dstint_lower = elem['dstint'].lower()
+                if (srcint_lower == 'any' or dstint_lower == 'any') or (elem['srcint'] in vdom_individual["interfaces"] and elem['dstint'] in vdom_individual["interfaces"] ):
+                    new_politics_add.append(elem)                
+
+
+### Explicación
+# Pienso que solo habría que comprobar las de ADD si realmente están esas interfaces en esos VDOM.
+# Las de delete, son políticas que están y no deberían de estar. Por eso no habría que hacer más comrpobaciones.
+
+
+    new_politics_delete = delete_list
+    # for elem in delete_list:
+    #     for vdom_individual in vdom_info:
+    #         if(elem["VDOM"] == "WAN"):
+    #             new_politics_delete.append(elem)
+    #             break  # Sino se guarda por cada iteración de vdom
+    #         elif(elem["VDOM"] == vdom_individual["vdom_name"]):
+    #             srcint_lower = elem['srcint'].lower()
+    #             dstint_lower = elem['dstint'].lower()
+    #             if (srcint_lower == 'any' or dstint_lower == 'any') or (elem['srcint'] in vdom_individual["interfaces"] and elem['dstint'] in vdom_individual["interfaces"] ):
+    #                 new_politics_delete.append(elem)        
+
+
+#        interfaces = get_interfaces(vdom_info=vdom_info, name=elem['VDOM'])
+        # print(elem["VDOM"])
+        # print(vdom_info[0]["vdom_name"])
+#        if(elem[])
+    #     srcint_lower = elem['srcint'].lower()
+    #     dstint_lower = elem['dstint'].lower()
+    #     if (srcint_lower == 'any' or dstint_lower == 'any') or (elem['srcint'] in interfaces and elem['dstint'] in interfaces):
+    #         new_politics_add.append(elem)
+
+    # print(interfaces)
+    # print()
+
+    # for elem in delete_list:
+    #     interfaces = get_interfaces(vdom_info=vdom_info, name=elem['VDOM'])
+    #     print(interfaces)
+    #     srcint_lower = elem['srcint'].lower()
+    #     dstint_lower = elem['dstint'].lower()
+    #     if (srcint_lower in interfaces and dstint_lower in interfaces) or (len(interfaces) == 0):
+    #         new_politics_delete.append(elem)
+
+    return new_politics_add, new_politics_delete
+
+
+
+#######################################################################################################
+#######################################################################################################
+#######################################################################################################
+
+
 if __name__ == "__main__":
 
     config_FWs_data = read_file("references/config_FWs.json")
@@ -121,43 +207,47 @@ if __name__ == "__main__":
     policies_data = read_file("references/pols_type_I.json")
     policies_data = policies_data["politicas"]
 
-    vdom_info = []
 
-    for vdom in info_vdoms:
-        if vdom["vdom_name"] != "WAN":
-            info = check_interfaces(vdom_info=vdom, policies=policies_data, vdom_list=vdom_names_list)
+# Comprobamos las interfaces y las políticas a la vez.
+# No es necesario el código de abajo
 
-            print(info)
-            print()
+
+    # vdom_info = []
+
+    # for vdom in info_vdoms:
+    #     if vdom["vdom_name"] != "WAN":
+    #         info = check_interfaces(vdom_info=vdom, policies=policies_data, vdom_list=vdom_names_list)
+
+    #         print(info)
+    #         print()
             
-            for elem in info:
-                vdom_info.append({
-                    "VDOM": vdom["vdom_name"],
-                    "srcint": elem["srcint"],
-                    "dstint": elem["dstint"]
-                })
+    #         for elem in info:
+    #             vdom_info.append({
+    #                 "VDOM": vdom["vdom_name"],
+    #                 "srcint": elem["srcint"],
+    #                 "dstint": elem["dstint"]
+    #             })
 
-    for elem in policies_data:
-        if elem["VDOM"] == "WAN":
-            vdom_info.append({
-                "VDOM": "WAN",
-                "srcint": elem["srcint"],
-                "dstint": elem["dstint"]
-            })
+    # for elem in policies_data:
+    #     if elem["VDOM"] == "WAN":
+    #         vdom_info.append({
+    #             "VDOM": "WAN",
+    #             "srcint": elem["srcint"],
+    #             "dstint": elem["dstint"]
+    #         })
 
-    file_data = read_file(filename="data/output/comparation.json")
-    new_politics_add, new_politics_delete = clean_politics(filename="data/output/comparation.json", vdom_info=info_vdoms)
+    # file_data = read_file(filename="data/output/comparation.json")
+    new_politics_add, new_politics_delete = clean_politics2(filename="data/output/comparation.json", vdom_info=info_vdoms)
 
     write_file("data/output/comparation_v2.json", {
-        "address": file_data['address'],
-        "addrgrps": file_data['addrgrps'],
-        "svcs": file_data['svcs'],
+        # "address": file_data['address'],
+        # "addrgrps": file_data['addrgrps'],
+        # "svcs": file_data['svcs'],
         "politicas": {
             "add": new_politics_add,
             "delete": new_politics_delete
         }
     })
-
     csv_add = "data/output/politicas_add.csv"
     csv_delete = "data/output/politicas_delete.csv"
     # Abrir el archivo CSV en modo escritura
@@ -165,7 +255,7 @@ if __name__ == "__main__":
         # Crear un objeto writer para escribir en el archivo
         writer = csv.writer(archivo_csv)
         # Escribir una fila con los encabezados
-        writer.writerow(["VDOM", "srcint", "dstint", "SRC", "DST", "ACTION"])
+        writer.writerow(["VDOM", "srcint", "dstint", "SRC", "DST","SVC", "ACTION"])
         for politica in new_politics_add:
             writer.writerow([politica["VDOM"], politica["srcint"], politica["dstint"], politica["SRC"],politica["DST"],politica["SVC"],politica["ACTION"]])
 

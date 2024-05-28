@@ -138,11 +138,7 @@ if __name__ == "__main__":
         list_svcs.append(svc)
 
     #Save the outputs in different files
-    #write_file("data/addresses.json", {"address":list_addresses})
-    #write_file("data/addrgrps.json", {"addgrp":list_grps})
-    #write_file("data/services.json", {"svcs":list_svcs})
-    #write_file("data/policies.json", {"políticas": list_policies})
-    #write_file("data/output.json", {"address": list_addresses, "addrgrp": list_grps, "svcs": list_svcs, "políticas":list_policies})
+   
     write_file("data/output/firewall_info.json", {"address": list_addresses, "addrgrp": list_grps, "svcs": list_svcs, "politicas":list_policies})
 
     #https://github.com/vladimirs-git/fortigate-api/blob/main/fortigate_api/service.py
