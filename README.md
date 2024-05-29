@@ -52,7 +52,8 @@ Ahora puedes ejecutar los scripts en el orden indicado:
 ````
 python3 scripts/script.py
 python3 scripts/compare.py
-python3 scripts/prueba.py
+python3 scripts/prueba-type1.py
+python3 scripts/json2pdf.py
 ````
 
 Si se prefiere se puede ejecutar el siguiente script para poder ejecutar todos los scripts en el orden indicado

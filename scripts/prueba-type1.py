@@ -38,68 +38,6 @@ def get_interfaces_by_VDOM(VDOM, vdom_data):
 
     return result
 
-def check_interfaces(vdom_info, policies, vdom_list):
-
-    vdom_results = []
-
-    for interfaz in vdom_info["interfaces"]:
-    #for interfaz in vdom_info["vdom_name"]:
-        interfaz = interfaz.lower()
-        for policy in policies:
-            #srcint = policy["srcint"]
-            srcint = policy["SRC"].lower()
-            if interfaz == srcint:
-                if policy["dstint"] in vdom_info["interfaces"]:
-                #if policy["DST"] in vdom_list:
-                    vdom_results.append({
-                        "srcint": srcint,
-                        "dstint": policy["DST"]
-                    })
-
-    return vdom_results
-
-def get_interfaces(vdom_info, name):
-    result = []
-
-    for elem in vdom_info:
-        vdom_name_lower = elem['vdom_name'].lower()
-        name_lower = name.lower()
-        if vdom_name_lower == name_lower:
-            result = elem["interfaces"]
-
-    return result
-
-def clean_politics(filename, vdom_info):
-    data_politics = read_file(filename=filename)
-    data_politics = data_politics["politicas"]
-
-    add_list = data_politics["add"]
-    delete_list = data_politics["delete"]
-
-    new_politics_add = []
-    new_politics_delete = []
-
-    for elem in add_list:
-        interfaces = get_interfaces(vdom_info=vdom_info, name=elem['VDOM'])
-        #print(interfaces)
-        srcint_lower = elem['srcint'].lower()
-        dstint_lower = elem['dstint'].lower()
-        if (srcint_lower == 'any' or dstint_lower == 'any') or (elem['srcint'] in interfaces and elem['dstint'] in interfaces):
-            new_politics_add.append(elem)
-
-    print(interfaces)
-    print()
-
-    for elem in delete_list:
-        interfaces = get_interfaces(vdom_info=vdom_info, name=elem['VDOM'])
-        print(interfaces)
-        srcint_lower = elem['srcint'].lower()
-        dstint_lower = elem['dstint'].lower()
-        if (srcint_lower in interfaces and dstint_lower in interfaces) or (len(interfaces) == 0):
-            new_politics_delete.append(elem)
-
-    return new_politics_add, new_politics_delete
-
 
 #################################
 #################################
@@ -145,37 +83,6 @@ def clean_politics2(filename, vdom_info):
 
 
     new_politics_delete = delete_list
-    # for elem in delete_list:
-    #     for vdom_individual in vdom_info:
-    #         if(elem["VDOM"] == "WAN"):
-    #             new_politics_delete.append(elem)
-    #             break  # Sino se guarda por cada iteración de vdom
-    #         elif(elem["VDOM"] == vdom_individual["vdom_name"]):
-    #             srcint_lower = elem['srcint'].lower()
-    #             dstint_lower = elem['dstint'].lower()
-    #             if (srcint_lower == 'any' or dstint_lower == 'any') or (elem['srcint'] in vdom_individual["interfaces"] and elem['dstint'] in vdom_individual["interfaces"] ):
-    #                 new_politics_delete.append(elem)        
-
-
-#        interfaces = get_interfaces(vdom_info=vdom_info, name=elem['VDOM'])
-        # print(elem["VDOM"])
-        # print(vdom_info[0]["vdom_name"])
-#        if(elem[])
-    #     srcint_lower = elem['srcint'].lower()
-    #     dstint_lower = elem['dstint'].lower()
-    #     if (srcint_lower == 'any' or dstint_lower == 'any') or (elem['srcint'] in interfaces and elem['dstint'] in interfaces):
-    #         new_politics_add.append(elem)
-
-    # print(interfaces)
-    # print()
-
-    # for elem in delete_list:
-    #     interfaces = get_interfaces(vdom_info=vdom_info, name=elem['VDOM'])
-    #     print(interfaces)
-    #     srcint_lower = elem['srcint'].lower()
-    #     dstint_lower = elem['dstint'].lower()
-    #     if (srcint_lower in interfaces and dstint_lower in interfaces) or (len(interfaces) == 0):
-    #         new_politics_delete.append(elem)
 
     return new_politics_add, new_politics_delete
 
@@ -209,40 +116,10 @@ if __name__ == "__main__":
 
 
 # Comprobamos las interfaces y las políticas a la vez.
-# No es necesario el código de abajo
 
-
-    # vdom_info = []
-
-    # for vdom in info_vdoms:
-    #     if vdom["vdom_name"] != "WAN":
-    #         info = check_interfaces(vdom_info=vdom, policies=policies_data, vdom_list=vdom_names_list)
-
-    #         print(info)
-    #         print()
-            
-    #         for elem in info:
-    #             vdom_info.append({
-    #                 "VDOM": vdom["vdom_name"],
-    #                 "srcint": elem["srcint"],
-    #                 "dstint": elem["dstint"]
-    #             })
-
-    # for elem in policies_data:
-    #     if elem["VDOM"] == "WAN":
-    #         vdom_info.append({
-    #             "VDOM": "WAN",
-    #             "srcint": elem["srcint"],
-    #             "dstint": elem["dstint"]
-    #         })
-
-    # file_data = read_file(filename="data/output/comparation.json")
     new_politics_add, new_politics_delete = clean_politics2(filename="data/output/comparation.json", vdom_info=info_vdoms)
 
     write_file("data/output/comparation_v2.json", {
-        # "address": file_data['address'],
-        # "addrgrps": file_data['addrgrps'],
-        # "svcs": file_data['svcs'],
         "politicas": {
             "add": new_politics_add,
             "delete": new_politics_delete
