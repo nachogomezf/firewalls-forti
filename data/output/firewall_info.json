@@ -1962,7 +1962,7 @@
             "DST": "G-IDC",
             "ACTION": "accept"
         },
-        {                                                                                                                                                                                                                                       
+        {
             "VDOM": "root",
             "srcint": "virtual-wan-link",
             "dstint": "Z_HOSP",

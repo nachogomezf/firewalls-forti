@@ -1,5 +1,5 @@
-python scripts/script.py
-python scripts/compare.py
-python scripts/prueba-type1.py
+python scripts/extract_info.py
+python scripts/first_compare.py
+python scripts/second_compare.py
 python scripts/json2pdf.py
 

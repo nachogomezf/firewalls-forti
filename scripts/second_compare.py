@@ -1,6 +1,7 @@
 import json
 import numpy as np
 import csv
+import os
 
 # 1 - Leer ambos ficheros
 def read_file(filename):
@@ -119,12 +120,20 @@ if __name__ == "__main__":
 
     new_politics_add, new_politics_delete = clean_politics2(filename="data/output/comparation.json", vdom_info=info_vdoms)
 
-    write_file("data/output/comparation_v2.json", {
-        "politicas": {
-            "add": new_politics_add,
-            "delete": new_politics_delete
-        }
-    })
+    try:
+        write_file("data/output/comparation_v2.json", {
+            "politicas": {
+                "add": new_politics_add,
+                "delete": new_politics_delete
+            }
+        })
+
+        # If the file is written successfully, delete the old file
+        os.remove("data/output/comparation.json")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
     csv_add = "data/output/politicas_add.csv"
     csv_delete = "data/output/politicas_delete.csv"
     # Abrir el archivo CSV en modo escritura

@@ -1,8 +1,12 @@
 import requests
 import json
+import os
+
+
 
 # Function to send GET request and return the response
 def get_data(url):
+    print(url)
     response = requests.get(url, verify=False)
 
     if response.status_code != 200:
@@ -17,9 +21,9 @@ def write_file(filename, data):
 
 # Function to get addresses from the API and return a list of address data
 def get_addresses(vdom_name, data):
-    url_addr = "https://%s/api/v2/cmdb/firewall/%s?vdom=%s&access_token=%s" % (data["ip"], "address", vdom_name, data["token"])
+    url_addr = "http://%s/api/v2/cmdb/firewall/%s?vdom=%s&access_token=%s" % (data["ip"], "address", vdom_name, data["token"])
     addresses = get_data(url=url_addr).json()["results"]
-    print(url_addr)
+    
 
     list_addresses = []
 
@@ -50,7 +54,7 @@ def get_addresses(vdom_name, data):
 
 # Function to get address groups from the API and return a list of address group data
 def get_addrgrps(vdom_name, data):
-    url_addrgrp = "https://%s/api/v2/cmdb/firewall/%s?vdom=%s&access_token=%s" % (data["ip"], "addrgrp", vdom_name, data["token"])
+    url_addrgrp = "http://%s/api/v2/cmdb/firewall/%s?vdom=%s&access_token=%s" % (data["ip"], "addrgrp", vdom_name, data["token"])
     addrgrps = get_data(url=url_addrgrp).json()["results"]
 
     list_grps = []
@@ -72,20 +76,34 @@ def get_addrgrps(vdom_name, data):
     return list_grps
 
 ############################################################################################################
-#                       MAIN CODE
+##############################              MAIN CODE             ##############################
 ############################################################################################################
 
 if __name__ == "__main__":
 
-    with open("data/info/vars_globales.json") as json_file:
-        data = json.load(json_file)
 
-    url_vdoms = "https://%s/api/v2/cmdb/system/vdom/?access_token=%s" % (data["ip"],data["token"])
-    vdoms = get_data(url=url_vdoms).json()["results"]
+    with open("references/config_FWs.json", "r") as json_file:
+        data_total = json.load(json_file)
+        data_total = data_total['FWS'][0]  # Assuming the first item in the list is the required data
 
-    write_file("data/vdom.json", vdoms)
+        ip = data_total.get("IP")
+        token = data_total.get("token")
+        tipo = data_total.get("tipo")
+        data = {"ip": data_total.get("IP"), "token": data_total.get("token")}
+
+
+        if ip and token and tipo:
+            url_vdoms = f"http://{ip}/api/v2/cmdb/system/vdom/?access_token={token}"
+            vdoms = get_data(url=url_vdoms).json()["results"]
+        else:
+            print("ip, token or tipo not found in the first item of config_FWs.json")
+
+        if tipo != "I":
+            print("Tipo de firewall no compatible")
+            exit()
 
     list_addresses = []
+    list_policies = []
 
     for vdom in vdoms:
 
@@ -95,10 +113,8 @@ if __name__ == "__main__":
         #list_addresses.append(get_addresses(vdom_name=vdom_name, data=data))
         list_grps = get_addrgrps(vdom_name=vdom_name, data=data)
 
-        url_policies = "https://%s/api/v2/cmdb/firewall/%s?access_token=%s" % (data["ip"], "policy", data["token"])
+        url_policies = "http://%s/api/v2/cmdb/firewall/%s?access_token=%s&vdom=%s" % (data["ip"], "policy", data["token"], vdom_name)
         policies = get_data(url=url_policies).json()["results"]
-
-        list_policies = []
 
         for policy in policies:
 
@@ -113,7 +129,7 @@ if __name__ == "__main__":
 
             list_policies.append(item)
 
-    url_services = "https://%s/api/v2/cmdb/firewall.service/custom/?access_token=%s" % (data["ip"],data["token"])
+    url_services = "http://%s/api/v2/cmdb/firewall.service/custom/?access_token=%s" % (data["ip"],data["token"])
 
     services = get_data(url=url_services).json()["results"]
     list_svcs = []
@@ -137,8 +153,7 @@ if __name__ == "__main__":
         
         list_svcs.append(svc)
 
-    #Save the outputs in different files
-   
-    write_file("data/output/firewall_info.json", {"address": list_addresses, "addrgrp": list_grps, "svcs": list_svcs, "politicas":list_policies})
-
-    #https://github.com/vladimirs-git/fortigate-api/blob/main/fortigate_api/service.py
+    output_dir = "data/output"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        write_file("data/output/firewall_info.json", {"address": list_addresses, "addrgrps": list_grps, "svcs": list_svcs, "politicas":list_policies})

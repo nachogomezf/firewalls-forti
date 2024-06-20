@@ -36,13 +36,7 @@ Si no se instala correctamente el modulo de `request` habrá que instalarlo medi
 python -m pip install requests
 
 ````
-
-Hay que tener en cuenta que hay que modificar el archivo ``vars_globales.json`` indicando el ``token`` e ``ip`` del firewall.
-
-Este archivo se encuentra en la ruta ``firewalls-forti/data/info``.
-
-````
-cd firewalls-forti/data/info
+cd firewalls-forti/
 ````
 
 Ahora puedes ejecutar los scripts en el orden indicado:
@@ -50,10 +44,11 @@ Ahora puedes ejecutar los scripts en el orden indicado:
 
 
 ````
-python3 scripts/script.py
-python3 scripts/compare.py
-python3 scripts/prueba-type1.py
+python3 scripts/extract_info.py
+python3 scripts/first_compare.py
+python3 scripts/second_compare.py
 python3 scripts/json2pdf.py
+
 ````
 
 Si se prefiere se puede ejecutar el siguiente script para poder ejecutar todos los scripts en el orden indicado
@@ -69,4 +64,4 @@ Podremos ver las políticas que son necesarias y las políticas que sobran en la
 ````
 cd /data/output
 ````
-Los archivos son en formato CSV ``politicas_add.csv`` y ``politicas_delete.csv``. Por otro lado también se puede ver en el archivo JSON ``comparation_v2.json``.
+Los archivos son en formato CSV ``politicas_add.csv`` y ``politicas_delete.csv``. Por otro lado también se puede ver en el archivo JSON ``comparation_v2.json`` y en formato PDF denominado ``reporte.pdf``.
