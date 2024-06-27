@@ -35,6 +35,7 @@ Si no se instala correctamente el modulo de `request` habrá que instalarlo medi
 ````
 python -m pip install requests
 
+`````
 ````
 cd firewalls-forti/
 ````
@@ -48,6 +49,7 @@ python3 scripts/extract_info.py
 python3 scripts/first_compare.py
 python3 scripts/second_compare.py
 python3 scripts/json2pdf.py
+
 
 ````
 
