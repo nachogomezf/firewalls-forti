@@ -21,7 +21,7 @@ def write_file(filename, data):
 
 # Function to get addresses from the API and return a list of address data
 def get_addresses(vdom_name, data):
-    url_addr = "http://%s/api/v2/cmdb/firewall/%s?vdom=%s&access_token=%s" % (data["ip"], "address", vdom_name, data["token"])
+    url_addr = "https://%s/api/v2/cmdb/firewall/%s?vdom=%s&access_token=%s" % (data["ip"], "address", vdom_name, data["token"])
     addresses = get_data(url=url_addr).json()["results"]
     
 
@@ -54,7 +54,7 @@ def get_addresses(vdom_name, data):
 
 # Function to get address groups from the API and return a list of address group data
 def get_addrgrps(vdom_name, data):
-    url_addrgrp = "http://%s/api/v2/cmdb/firewall/%s?vdom=%s&access_token=%s" % (data["ip"], "addrgrp", vdom_name, data["token"])
+    url_addrgrp = "https://%s/api/v2/cmdb/firewall/%s?vdom=%s&access_token=%s" % (data["ip"], "addrgrp", vdom_name, data["token"])
     addrgrps = get_data(url=url_addrgrp).json()["results"]
 
     list_grps = []
@@ -93,7 +93,7 @@ if __name__ == "__main__":
 
 
         if ip and token and tipo:
-            url_vdoms = f"http://{ip}/api/v2/cmdb/system/vdom/?access_token={token}"
+            url_vdoms = f"https://{ip}/api/v2/cmdb/system/vdom/?access_token={token}"
             vdoms = get_data(url=url_vdoms).json()["results"]
         else:
             print("ip, token or tipo not found in the first item of config_FWs.json")
@@ -113,7 +113,7 @@ if __name__ == "__main__":
         #list_addresses.append(get_addresses(vdom_name=vdom_name, data=data))
         list_grps = get_addrgrps(vdom_name=vdom_name, data=data)
 
-        url_policies = "http://%s/api/v2/cmdb/firewall/%s?access_token=%s&vdom=%s" % (data["ip"], "policy", data["token"], vdom_name)
+        url_policies = "https://%s/api/v2/cmdb/firewall/%s?access_token=%s&vdom=%s" % (data["ip"], "policy", data["token"], vdom_name)
         policies = get_data(url=url_policies).json()["results"]
 
         for policy in policies:
@@ -129,7 +129,7 @@ if __name__ == "__main__":
 
             list_policies.append(item)
 
-    url_services = "http://%s/api/v2/cmdb/firewall.service/custom/?access_token=%s" % (data["ip"],data["token"])
+    url_services = "https://%s/api/v2/cmdb/firewall.service/custom/?access_token=%s" % (data["ip"],data["token"])
 
     services = get_data(url=url_services).json()["results"]
     list_svcs = []

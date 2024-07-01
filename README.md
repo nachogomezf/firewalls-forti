@@ -66,4 +66,5 @@ Podremos ver las políticas que son necesarias y las políticas que sobran en la
 ````
 cd /data/output
 ````
+
 Los archivos son en formato CSV ``politicas_add.csv`` y ``politicas_delete.csv``. Por otro lado también se puede ver en el archivo JSON ``comparation_v2.json`` y en formato PDF denominado ``reporte.pdf``.
